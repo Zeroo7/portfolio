@@ -11,8 +11,12 @@ a {
     text-decoration: none;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
-    height: 100%;
     font-family: 'Manrope', sans-serif;
 }
 
