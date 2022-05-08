@@ -523,6 +523,10 @@ nav {
     background-color: rgb(50,205,50);
 }
 
+#section5 {
+    background-color: cadetblue;
+}
+
 
 
 @media only screen and (max-width:900px) {
