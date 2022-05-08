@@ -321,12 +321,9 @@ nav {
     left: 5.2em;
 }
 
-#services {
+.services-container {
     background-color: rgb(32, 35, 40);
     border: solid 1px rgb(221, 82, 41);
-}
-
-.services-container {
     display: flex;
     align-items: center;
     justify-content: center;
