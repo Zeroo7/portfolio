@@ -13,7 +13,7 @@ a {
 
 body,
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
@@ -323,11 +323,14 @@ nav {
 
 #services {
     background-color: rgb(32, 35, 40);
+    border: solid 1px rgb(221, 82, 41);
+}
+
+.services-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    border: solid 1px rgb(221, 82, 41);
 }
 
 .sevices-card {
@@ -401,6 +404,10 @@ nav {
 
 #gallery {
     background-color: rgb(32, 35, 40);
+    border: solid 1px rgb(221, 82, 41);
+}
+
+.gallery-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -408,7 +415,6 @@ nav {
     gap: 1.5vw;
     padding: 3.3vw;
     padding-top: calc(3.2vw + 1em);
-    border: solid 1px rgb(221, 82, 41);
 }
 
 .gallery-card {
