@@ -20,6 +20,10 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+#home {
+    box-sizing: content-box;
+}
+
 section span {
     position: absolute;
     top: 50%;
