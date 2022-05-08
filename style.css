@@ -1,0 +1,603 @@
+* {
+    box-sizing: border-box;
+}
+
+button:active {
+    background: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+}
+
+section span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+body.slider__body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider__container {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    transition: -webkit-transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+}
+
+.slider__page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__indicators {
+    position: fixed;
+    left: 18px;
+    top: 50%;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slider__indicator {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 100px;
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+.slider__indicator--active {
+    opacity: 1;
+}
+
+nav {
+    position: fixed;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.nav-menu {
+    position: fixed;
+    background-color: transparent;
+    width: 38vw;
+    right: 1vw;
+    top: 1vh;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    opacity: 0.85;
+    font-size: 1.3vw;
+    padding: 0.5em;
+    margin: 0;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-link.active {
+    color: white;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 2px;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 110%;
+}
+
+#hamburger {
+    display: none;
+    position: relative;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bar {
+    border: none;
+}
+
+.bar,
+.bar:before,
+.bar:after {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 2.4px;
+    border-radius: 5px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: top 0.3s 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.bar:before {
+    top: 7px;
+}
+
+.bar:after {
+    top: -7px;
+}
+
+#hamburger.active .bar:before,
+#hamburger.active .bar:after {
+    top: 0;
+    transition: top 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out;
+}
+
+#hamburger.active .bar,
+#hamburger.closing .bar {
+    background: transparent;
+    transition: background 0.5s ease-in-out;
+}
+
+#hamburger.active .bar:before {
+    transform: rotate(45deg);
+}
+
+#hamburger.active .bar:after {
+    transform: rotate(-45deg);
+}
+
+
+#me {
+    width: calc(5em + 5vw);
+    height: auto;
+    border-radius: 50%;
+    display: inline;
+    margin: auto;
+    padding: auto;
+    position: relative;
+    right: calc(8% + 3em);
+    top: 18%;
+}
+
+#home-orange {
+    background-color: rgb(221, 82, 41);
+    float: right;
+    width: 40vw;
+    height: 100vh;
+}
+
+#info {
+    color: rgb(232, 213, 207);
+    position: absolute;
+    top: 35%;
+    margin: 1.5em;
+    font-size: calc(0.5em + 1vw);
+    width: 35vw;
+}
+
+.about {
+    margin: 0.5em;
+}
+
+#top-right {
+    background-color: rgb(32, 35, 40);
+    width: 9.5vw;
+    height: 9.5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 20em;
+}
+
+#home-dark {
+    background-color: rgb(32, 35, 40);
+    float: left;
+    width: 60vw;
+    height: 100vh;
+}
+
+.inline {
+    display: inline;
+    color: #fff;
+}
+
+#logo {
+    position: absolute;
+    left: 5px;
+}
+
+#logo-img {
+    width: 107px;
+    height: 35px;
+    position: relative;
+    left: 4px;
+    top: 10px;
+}
+
+#welcome {
+    color: rgb(226, 231, 238);
+    position: relative;
+    top: 30%;
+    left: 12vw;
+    width: 35vw;
+}
+
+#hi {
+    font-size: calc(1em + 2vw);
+    display: inline;
+}
+
+#name {
+    font-size: calc(1em + 3vw);
+    font-weight: bolder;
+    color: white;
+}
+
+#bottom-left {
+    background-color: rgb(221, 82, 41);
+    width: 7em;
+    height: 7em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 20em 0 0;
+}
+
+.icon {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.icon:hover {
+    transform: rotate(360deg);
+}
+
+#in {
+    left: 0.6em;
+    top: 0.2em;
+}
+
+#fb {
+    left: 3.5em;
+    bottom: 3.5em;
+}
+
+#gt {
+    bottom: 0.3em;
+    left: 5.2em;
+}
+
+#services {
+    background-color: rgb(32, 35, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: solid 1px rgb(221, 82, 41);
+}
+
+.sevices-card {
+    height: calc(14em + 10vw);
+    width: calc(10em + 6vw);
+    margin: 9vw;
+    color: rgb(226, 231, 238);
+}
+
+.sevices-card-front {
+    padding: 1em;
+    border: solid 1px rgb(221, 82, 41);
+}
+
+.flip-card-container {
+    text-align: center;
+    perspective: 1000px;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.flip-card-back {
+    padding: 1em;
+    transform: rotateY(180deg);
+    background-color: rgb(221, 82, 41);
+    color: rgb(232, 213, 207);
+    font-size: calc(0.5em + 0.5vw);
+}
+
+.services-btn {
+    height: 2em;
+    width: 7.5em;
+    background-color: rgb(221, 82, 41);
+    color: rgb(232, 213, 207);
+    border: none;
+    border-radius: 0.8em;
+}
+
+.hide {
+    display: none;
+}
+
+#gallery {
+    background-color: rgb(32, 35, 40);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+    padding: 3.3vw;
+    padding-top: calc(3.2vw + 1em);
+    border: solid 1px rgb(221, 82, 41);
+}
+
+.gallery-card {
+    height: calc(4em + 16vw);
+    width: calc(9em + 16vw);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-btn {
+    height: 1.9em;
+    width: 7em;
+    background-color: rgb(41, 180, 221);
+    color: rgb(214, 227, 232);
+    border: none;
+    border-radius: 1.1em;
+    font-size: 100%;
+    transition: ease-in-out 0.1s;
+    box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.5);
+}
+
+.gallery-btn.hover:hover {
+    background-color: white;
+    color: rgb(41, 180, 221);
+    border: double 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+#contact {
+    background-color: rgb(32, 35, 40);
+}
+
+.contact-us {
+    padding-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(226, 231, 238);
+}
+
+.contact-methods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+    margin: 2em;
+    margin-top: 5em;
+}
+
+.contact-button {
+    border: none;
+    border-radius: 10em;
+    width: calc(2em + 5vw);
+    height: calc(2em + 5vw);
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+}
+
+.contact-button:hover {
+    width: calc(9em + 15vw);
+}
+
+.contact-button:hover>.contact-icon {
+    transform: rotate(360deg);
+}
+
+.contact-icon {
+    margin: 1vw;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    width: calc(1em + 3vw);
+    height: calc(1em + 3vw);
+    transition: 0.5s ease-in-out;
+}
+
+.contact-link {
+    color: white;
+    opacity: 0.9;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.3vw;
+    margin: auto 2.5em;
+}
+
+#gt-contact, #free-contact {
+    border-radius: 50%;
+}
+
+#free-btn{
+    background-color: rgb(41, 180, 221);
+}
+
+#gt-btn{
+    background-color: rgb(250, 104, 250);
+}
+
+#in-btn{
+    background-color: rgb(23, 169, 253);
+}
+
+#fb-btn{
+    background-color: rgb(1, 101, 225);
+}
+
+#up-btn{
+    background-color: rgb(50,205,50);
+}
+
+
+
+@media only screen and (max-width:900px) {
+    #top-right {
+        width: 6.5em;
+        height: 6.5em;
+    }
+
+    #hamburger {
+        display: block;
+        margin-bottom: 0.5em;
+        top: 0.6em;
+        left: 0.7em;
+    }
+
+    nav {
+        right: 0;
+        background-color: transparent;
+        padding: 0.5em;
+        width: 6.5em;
+        height: calc(16em + 1px);
+        display: flex;
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav.active {
+        background-color: rgb(32, 35, 40);
+    }
+
+    .nav-menu {
+        right: -100%;
+        top: 3em;
+        flex-direction: column;
+        background-color: rgb(32, 35, 40);
+        width: 6.5em;
+        height: 13em;
+        text-align: left;
+        transition: 0.5s ease-in-out;
+    }
+
+    .nav-link {
+        position: relative;
+        padding: 0.8em;
+        font-size: 1em;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        opacity: 0.9;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link:hover {
+        border: 1px solid;
+        border-image: linear-gradient(#f3defc, #63a3e6) 1;
+        border-left: transparent;
+        border-right: transparent;
+        background-color: rgb(48, 52, 58);
+    }
+
+    .contact-link {
+        font-size: 1em;
+    }
+
+    .nav-link:hover::after {
+        width: 0;
+    }
+}
+
+@media only screen and (max-width:560px) {
+    .contact-methods {
+        flex-direction: column;
+        margin-top: 1.5em;
+        gap: 4vw;
+    }
+}
