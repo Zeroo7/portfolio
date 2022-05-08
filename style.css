@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+section {
+    width: 100%;
+    height: 100vh;
+}
+
 button:active {
     background: black;
     color: white;
@@ -18,10 +23,6 @@ html {
 
 body {
     font-family: 'Manrope', sans-serif;
-}
-
-#home {
-    box-sizing: content-box;
 }
 
 section span {
