@@ -40,24 +40,43 @@ var slider = function (sliderElement) {
             }
         });
 
-        // set up page and build visual indicators
-    document.querySelector(sliderElement).classList.add('slider__container');
-    var indicatorContainer = document.createElement('div');
-    indicatorContainer.classList.add('slider__indicators');
+        // set up visual indicators and nav links
+        document.querySelector(sliderElement).classList.add('slider__container');
+        var indicatorContainer = document.createElement('div');
+        indicatorContainer.classList.add('slider__indicators');
 
-    var index = 1;
-    [].forEach.call(document.querySelectorAll(sliderElement + ' > *'), function (section) {
+        var index = 1;
+        [].forEach.call(document.querySelectorAll(sliderElement + ' > *'), function (section) {
 
-      var indicator = document.createElement('a');
-      indicator.classList.add('slider__indicator')
-      indicator.setAttribute('data-slider-target-index', index);
-      indicatorContainer.appendChild(indicator);
+            var indicator = document.createElement('a');
+            indicator.classList.add('slider__indicator')
+            indicator.setAttribute('data-slider-target-index', index);
+            indicator.setAttribute('id', 'indicators')
+            indicatorContainer.appendChild(indicator);
 
-      section.classList.add('slider__page');
-      pages.push(section);
-      section.setAttribute('data-slider-index', index++);
-    });
+            section.classList.add('slider__page');
+            pages.push(section);
+            section.setAttribute('data-slider-index', index++);
 
+            const navMenu = document.querySelector('.nav-menu')
+            const navLink = document.createElement('a');
+            navLink.classList.add('nav-link')
+            navLink.setAttribute('href', `#${section.id}`)
+            navLink.textContent = section.id.toUpperCase()
+            navMenu.appendChild(navLink)
+
+            const clickToJump = () => {
+                const target = section.getAttribute('data-num')
+
+                indicator.setAttribute('href', `#${section.id}`)
+                indicator.addEventListener('click', () => changeSlide(target - currentSlide))
+
+                navLink.setAttribute('href', `#${section.id}`)
+                navLink.addEventListener('click', () => changeSlide(target - currentSlide))
+            }
+            clickToJump()
+
+        });
 
 
         document.body.appendChild(indicatorContainer);
