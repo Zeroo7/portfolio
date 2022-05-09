@@ -327,7 +327,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: content-box;
 }
 
 .services-container {
@@ -335,6 +334,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    box-sizing: content-box;
 }
 
 .sevices-card {
