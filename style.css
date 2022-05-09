@@ -334,12 +334,11 @@ nav {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-sizing: content-box;
 }
 
 .sevices-card {
     height: calc(14em + 10vw);
-    width: calc(10em + 6vw);
+    width: 11em;
     margin: 9vw;
     color: rgb(226, 231, 238);
 }
