@@ -324,16 +324,18 @@ nav {
 #services {
     background-color: rgb(32, 35, 40);
     border: solid 1px rgb(221, 82, 41);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.services-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.web-design {
+    position: absolute;
+    right: 10vw;
+    top: 10vh;
+}
+
+.front-end {
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
 }
 
 .sevices-card {
@@ -341,7 +343,6 @@ nav {
     width: calc(10em + 6vw);
     margin: 9vw;
     color: rgb(226, 231, 238);
-    padding: 0.5em;
 }
 
 .sevices-card-front {
@@ -608,6 +609,23 @@ nav {
 
     .nav-link:hover::after {
         width: 0;
+    }
+}
+
+@media only screen and (max-width:660px) {
+    #services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .front-end {
+        position: unset;
+    }
+    
+    .web-design {
+        position: unset;
     }
 }
 
