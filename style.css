@@ -613,18 +613,12 @@ nav {
 }
 
 @media only screen and (max-width:660px) {
-    .services {
-        padding: 40%;
-    }
-
     .front-end {
-        position: relative;
         left: 20%;
         top: 3vh;
     }
     
     .web-design {
-        position: absolute;
         left: 20%;
         top: 50vh;
     }
