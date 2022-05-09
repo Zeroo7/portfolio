@@ -324,9 +324,6 @@ nav {
 #services {
     background-color: rgb(32, 35, 40);
     border: solid 1px rgb(221, 82, 41);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .services-container {
@@ -408,15 +405,12 @@ nav {
 #gallery {
     background-color: rgb(32, 35, 40);
     border: solid 1px rgb(221, 82, 41);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .gallery-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1.5vw;
     padding: 3.3vw;
