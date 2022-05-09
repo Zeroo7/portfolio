@@ -338,7 +338,7 @@ nav {
 
 .sevices-card {
     height: calc(14em + 10vw);
-    width: 11em;
+    width: calc(10em + 6vw);
     margin: 9vw;
     color: rgb(226, 231, 238);
 }
