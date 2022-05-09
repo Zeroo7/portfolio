@@ -413,12 +413,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.gallery-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1.5vw;
     padding: 3.3vw;
