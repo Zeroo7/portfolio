@@ -613,23 +613,20 @@ nav {
 }
 
 @media only screen and (max-width:660px) {
-    #services{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .services {
+        padding: 40%;
     }
 
     .front-end {
         position: relative;
-        left: 2vw;
-        top: 2vh;
+        left: 20%;
+        top: 3vh;
     }
     
     .web-design {
-        position: relative;
-        left: 2vw;
-        top: 0;
+        position: absolute;
+        left: 20%;
+        top: 50vh;
     }
 }
 
