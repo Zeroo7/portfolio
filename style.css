@@ -341,7 +341,7 @@ nav {
     width: calc(10em + 6vw);
     margin: 9vw;
     color: rgb(226, 231, 238);
-    padding: auto;
+    padding: 0.5em;
 }
 
 .sevices-card-front {
