@@ -621,11 +621,15 @@ nav {
     }
 
     .front-end {
-        position: unset;
+        position: relative;
+        left: 2vw;
+        top: 2vh;
     }
     
     .web-design {
-        position: unset;
+        position: relative;
+        left: 2vw;
+        top: 0;
     }
 }
 
