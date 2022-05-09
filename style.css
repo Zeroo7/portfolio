@@ -335,8 +335,8 @@ nav {
 
 .sevices-card {
     height: calc(14em + 10vw);
-    width: calc(10em + 6vw);
-    margin: 9vw;
+    width: calc(10em + 6%);
+    margin: 9%;
     color: rgb(226, 231, 238);
 }
 
@@ -410,7 +410,7 @@ nav {
 .gallery-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1.5vw;
     padding: 3.3vw;
