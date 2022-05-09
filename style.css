@@ -324,6 +324,9 @@ nav {
 #services {
     background-color: rgb(32, 35, 40);
     border: solid 1px rgb(221, 82, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .services-container {
@@ -335,8 +338,8 @@ nav {
 
 .sevices-card {
     height: calc(14em + 10vw);
-    width: calc(10em + 6%);
-    margin: 9%;
+    width: calc(10em + 6vw);
+    margin: 9vw;
     color: rgb(226, 231, 238);
 }
 
@@ -405,12 +408,15 @@ nav {
 #gallery {
     background-color: rgb(32, 35, 40);
     border: solid 1px rgb(221, 82, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1.5vw;
     padding: 3.3vw;
