@@ -326,7 +326,6 @@ nav {
     border: solid 1px rgb(221, 82, 41);
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
