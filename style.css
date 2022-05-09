@@ -330,7 +330,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .sevices-card {
@@ -601,6 +600,12 @@ nav {
 
     .nav-link:hover::after {
         width: 0;
+    }
+}
+
+@media only screen and (max-width:620px) {
+    .services-container {
+        flex-direction: column;
     }
 }
 
